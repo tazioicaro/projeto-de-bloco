@@ -2,61 +2,63 @@ package model;
 
 import java.io.Serializable;
 
-public class Turma implements Serializable{
+public class ModeloDeAvalicao implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
+	//GRUD no ManagerBean
 	private Integer id;
-	private String nome;
+	private Questoes questoes;
 	private Curso curso;
-	private Aluno aluno;
 	private Professor professor;
 	
-	//CadastrarTruma, Alterar e excluir será no ManagerBean
 	
-	public Turma(){
+	public ModeloDeAvalicao(){
 		
-	}	
-
-	public Turma(Integer id, String nome, Curso curso, Aluno aluno,
+	}
+	
+	public ModeloDeAvalicao(Integer id, Questoes questoes, Curso curso,
 			Professor professor) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.questoes = questoes;
 		this.curso = curso;
-		this.aluno = aluno;
 		this.professor = professor;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+
+	public Questoes getQuestoes() {
+		return questoes;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public void setQuestoes(Questoes questoes) {
+		this.questoes = questoes;
 	}
+
 	public Curso getCurso() {
 		return curso;
 	}
+
 	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
-	public Aluno getAluno() {
-		return aluno;
-	}
-	public void setAluno(Aluno aluno) {
-		this.aluno = aluno;
-	}
+
 	public Professor getProfessor() {
 		return professor;
 	}
+
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
 	}
 	
 	
+	
+	
+
 }

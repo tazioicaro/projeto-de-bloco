@@ -3,6 +3,7 @@ package model;
 import java.io.Serializable;
 
 public class Professor  extends Pessoa implements Serializable{
+	private static final long serialVersionUID = 1L;
 	
 	//Metodos CRUDS no ManagerBean
 	
