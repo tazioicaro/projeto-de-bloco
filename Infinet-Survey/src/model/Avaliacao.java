@@ -1,15 +1,10 @@
 package model;
 
 import java.io.Serializable;
-<<<<<<< HEAD
-
-public class Avaliacao implements Serializable {
-	private static final long serialVersionUID = 1L;
-=======
 import java.util.Collection;
 
-public class Avaliacao  implements Serializable{
 
+public class Avaliacao implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private AberturaDeAvaliacao aberturaDeAvaliacao;
@@ -65,9 +60,5 @@ public class Avaliacao  implements Serializable{
 	
 	
 	
-	
-	
-	
->>>>>>> branch 'master' of https://github.com/tazioicaro/projeto-de-bloco.git
 
 }
