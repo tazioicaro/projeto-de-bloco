@@ -13,19 +13,7 @@ public class Avaliacao implements Serializable {
 	private String respostas;
 	
 	
-	public Avaliacao(){
-		
-	}
 	
-	public Avaliacao(AberturaDeAvaliacao aberturaDeAvaliacao, Aluno aluno,
-			Collection<Questoes> questoes, String respostas) {
-		super();
-		this.aberturaDeAvaliacao = aberturaDeAvaliacao;
-		this.aluno = aluno;
-		this.questoes = questoes;
-		this.respostas = respostas;
-	}
-
 	public AberturaDeAvaliacao getAberturaDeAvaliacao() {
 		return aberturaDeAvaliacao;
 	}
