@@ -1,31 +1,38 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title><ui:insert name="titulo"> Sistema de Pesquisa de satistação da Infnet</ui:insert></title>
-	<h:outputStylesheet library="css" name="ArquivoCSS.css" />
+	<title><ui:insert name="titulo">Sistema de Pedidos de venda</ui:insert></title>
+	<h:outputStylesheet library="css" name="sistemas.css" />
 </h:head>
 <h:body>
-
-	<!-- Cabeçalho html 5 -->
-
-	<header>
-		<div>
-			<h:link>
-				<h:graphicImage library="images" name="nomeDaImagem.svg" />
-			</h:link>
-		</div>
-	</header>
-
-
-	<div id="conteudo">
-		<ui:insert name="corpo" />
+<header>
+   <div>
+		<h:link>			
+		     <h:graphicImage library="images" name="logo-algaworks-branca.png"/>
+		</h:link>
 	</div>
+</header>
 
 </h:body>
 
-<!-- Nas página de componentes não esquecer de usar o autocompletar para achar o endereço do Template principal -->
+<div id="conteudo">
+<ui:insert name="corpo"/>
+</div>
+
+<p:separator style="margin-top:20px"/>
+
+<footer>
+ Curso Online de Sistemas Comerciais JAVA EE com CDI, JPA e PrimaFaces
+ <a href="http://Nãosei" target="_blank">LinkDaEmpresa</a>
+
+</footer>
 </html>
+
+
+
+
