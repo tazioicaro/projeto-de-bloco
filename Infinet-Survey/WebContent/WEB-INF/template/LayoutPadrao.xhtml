@@ -7,28 +7,32 @@
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title><ui:insert name="titulo">Sistema de Pedidos de venda</ui:insert></title>
-	<h:outputStylesheet library="css" name="sistemas.css" />
+	<h:outputStylesheet library="css" name="geral.css" />
 </h:head>
 <h:body>
-<header>
-   <div>
-		<h:link>			
-		     <h:graphicImage library="images" name="logo-algaworks-branca.png"/>
-		</h:link>
-	</div>
-</header>
+	<header>
+		<div align="left" id="logo">
+			<h:link>
+				<h:graphicImage library="images" name="logo.png" id="logoPrincipal" />
+			</h:link>
+		</div>
+		
+		<div align="center" id="nome-logo">
+			<H2 id="IS" >IS - Infnet Survey</H2>
+		</div>
+	</header>
 
 </h:body>
 
 <div id="conteudo">
-<ui:insert name="corpo"/>
+	<ui:insert name="corpo" />
 </div>
 
-<p:separator style="margin-top:20px"/>
+<p:separator style="margin-top:20px" />
 
 <footer>
- Curso Online de Sistemas Comerciais JAVA EE com CDI, JPA e PrimaFaces
- <a href="http://Nãosei" target="_blank">LinkDaEmpresa</a>
+	Curso Online de Sistemas Comerciais JAVA EE com CDI, JPA e PrimaFaces <a
+		href="http://Nãosei" target="_blank">LinkDaEmpresa</a>
 
 </footer>
 </html>
