@@ -1,47 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:f="http://java.sun.com/jsf/core">
-<h:head>
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
-<!--  Não será utilizado o template padrão -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Login</title>
+	<ui:define name="titulo">Dashboard</ui:define>
 
-<h:outputStylesheet library="css" name="geral.css"/>
-</h:head>
-<h:body>
+	<ui:define name="corpo">
 
-<!-- Centralizado na Horinzontal -->
-<div id="login-dialog"> 
+		<!-- Centralizado na Horinzontal -->
+		<div id="login-dialog" style="height:auto">
 
-<h1>Login</h1>
-<h:form id="frm">
+			<h1>Login</h1>
+			<h:form id="frm" style="width:80%; min-height:20%">
 
 
-<h:panelGrid columns="2" styleClass="grid-login">
+				<h:panelGrid columns="2" styleClass="grid-login">
 
-<p:outputLabel value="E-mail"/>
-<p:inputText size="30"/>
+					<p:outputLabel value="E-mail" />
+					<p:inputText size="30" />
 
-<p:outputLabel value="Senha"/>
-<p:password size="30"/>
-<h:panelGrid/>
-<p:commandButton value="Login"/>
+					<p:outputLabel value="Senha" />
+					<p:password size="30" />
+					
+					<h:panelGrid />
+					<p:commandButton value="Login" />
 
-</h:panelGrid>
-
-
-</h:form>
-
-</div>
+				</h:panelGrid>
 
 
-</h:body>
-</html>
+			</h:form>
+
+		</div>
+
+	</ui:define>
+	
+	<ui:define name="rodape">
+	
+	</ui:define>
+
+</ui:composition>
 
 
 
