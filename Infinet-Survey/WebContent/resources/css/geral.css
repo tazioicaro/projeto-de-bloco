@@ -13,7 +13,7 @@ header{
 	
 	padding: 5px 0px;
 	margin-bottom:20px;
-	height:70px;
+	height:75px;
 	background-color: #00008B;
 	color: #fff;
 	
@@ -25,7 +25,8 @@ header{
 header > div{
 	
 	margin-left: 8px;
-	height: 60px;
+	margin-top:2.5px;
+	height: 75px;
 	
 }
 footer{
@@ -90,17 +91,27 @@ h1{
     width: 19%;
     height: 70px;
     min-width: 6%;
+    display: inline-block;
 	
 }
 
 #nome-logo{
 	position: relative; 
-	width: 80%;
-	top: -88px;
-	left: 20px;
+	width: 60%;
+	top: -48px;
 	min-width: 10%;
+	height: 70px;
+	display: inline-block;
+	
 	
 }
 #IS{
 	font-size: 40px;
+}
+#nomes_botoes{
+	
+	width: 15%; 
+	display: inline-block; 
+	position: relative; 
+	top: -40%;
 }

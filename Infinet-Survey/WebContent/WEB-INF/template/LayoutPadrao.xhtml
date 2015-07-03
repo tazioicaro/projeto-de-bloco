@@ -11,7 +11,7 @@
 </h:head>
 <h:body>
 	<header>
-	<div>
+	<div style="width: 100%; display: inline-block;">
 		<div align="left" id="logo">
 			<h:link>
 				<h:graphicImage library="images" name="logo.png" id="logoPrincipal" />
@@ -20,6 +20,11 @@
 		
 		<div align="center" id="nome-logo">
 			<H2 id="IS" >IS - Infnet Survey</H2>
+		</div>
+		
+		<div align="right" id="nomes_botoes">
+			<h:outputText value="#{param.nomeTela}" id="destaqueNome" style="font-size:16px; margin-left:12px" />
+			<h:outputText value="#{param.nomeFuncaoTela}" id="destaqueFuncao" style="font-size:16px; margin-left:12px; "/>
 		</div>
 		</div>
 	</header>
