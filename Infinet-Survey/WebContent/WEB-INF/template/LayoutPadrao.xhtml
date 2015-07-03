@@ -23,8 +23,8 @@
 		</div>
 		
 		<div align="right" id="nomes_botoes">
-			<h:outputText value="#{param.nomeTela}" id="destaqueNome" style="font-size:16px; margin-left:12px" />
-			<h:outputText value="#{param.nomeFuncaoTela}" id="destaqueFuncao" style="font-size:16px; margin-left:12px; "/>
+			<h:outputText value="#{param.nomeTela}" id="destaqueNome" style="font-size:16px; margin-left:12px" rendered="#{not empty facesContext.externalContext.userPrincipal.name}"/>
+			<h:outputText value="#{param.nomeFuncaoTela}" id="destaqueFuncao" style="font-size:16px; margin-left:12px;" rendered="#{not empty facesContext.externalContext.userPrincipal.name}"/>
 		</div>
 		</div>
 	</header>
