@@ -1,0 +1,57 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<ui:define name="titulo">Cadastro de Alunos</ui:define>
+
+	<ui:define name="corpo">
+
+		<f:param name="nomeTela" value="Aluno" />
+		<f:param name="nomeFuncaoTela" value="Incluir" />
+
+		<h1>Cadastra de Aluno</h1>
+		<!-- Temporário -->
+		<br />
+		<h:form id="frm" style="width:50%; align:center">
+
+
+			<h:panelGrid columns="3" cellpadding="8" style="width:50%; align:center">
+				<p:outputLabel value="Nome" for="nome" />
+				<p:inputText id="nome" size="60" />
+				<p:commandButton value="Filtrar" style="margin:5px; font-size:12px" />
+
+				<h:panelGrid />
+				<p:dataTable>
+					<p:column headerText="Aluno" style="text-align:left; width:45%">
+						<h:outputText />
+					</p:column>
+
+					<p:column headerText="CPF" style="text-align:left; width:15%">
+						<h:outputText />
+					</p:column>
+				</p:dataTable>
+				<h:outputText/>
+
+			</h:panelGrid>
+
+
+
+
+
+			<br />
+			<br />
+			<div align="center">
+				<p:button value="Cancelar" style="margin:5px" />
+				<p:commandButton value="Cadastrar" style="margin:5px" />
+			</div>
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>

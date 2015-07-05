@@ -4,31 +4,45 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
-	
 
 
-	<ui:define name="titulo">Cadastro de Alunos</ui:define>	
-	
+
+	<ui:define name="titulo">Cadastro de Alunos</ui:define>
+
 	<ui:define name="corpo">
-	
-		<f:param name="nomeTela" value="Aluno"/>
-	<f:param name="nomeFuncaoTela" value="Incluir"/>
-	
-	<h1>Cadastro de Aluno</h1>
-	<h:form id="frm">
-	
-	
-	
-	
-	
-	
-	</h:form>
-	
-	
-	
-	
-	
+
+		<f:param name="nomeTela" value="Aluno" />
+		<f:param name="nomeFuncaoTela" value="Incluir" />
+
+		<h1>Cadastro de Aluno</h1><!-- Temporário -->
+		<br/>
+		<h:form id="frm">
+
+			<h:panelGrid columns="2" cellpadding="8">
+
+				<p:outputLabel value="Nome" for="nome" />
+				<p:inputText id="nome" size="60" />
+
+				<p:outputLabel value="Sexo" for="sexo" />
+				<p:selectOneMenu id="sexo">
+					<f:selectItem itemLabel="Selecione" />
+				</p:selectOneMenu>
+
+				<p:outputLabel value="CPF" for="cpf" />
+				<p:inputText id="cpf" size="22" />
+				
+	<p:outputLabel value="E-mail" for="email" />
+				<p:inputText id="email" size="60" />				
+
+			</h:panelGrid>
+			<br/>	<br/>
+<div align="center">
+<p:button value="Cancelar" style="margin:5px"/>
+<p:commandButton value="Cadastrar" style="margin:5px"/>
+</div>
+		</h:form>
+
 	</ui:define>
-	
+
 
 </ui:composition>
