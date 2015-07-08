@@ -4,14 +4,16 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
+	<div style="max-width: 80%;min-width: 50%; margin-left: 10%; margin-top: 1%;">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title><ui:insert name="titulo">Sistema de Pedidos de venda</ui:insert></title>
 	<h:outputStylesheet library="css" name="geral.css" />
 </h:head>
 <h:body>
+<div style="text-align: center; left: 20px;">
 	<header>
-	<div style="width: 100%; display: inline-block;">
+	<div style="min-width: 100%; display: inline-block;">
 		<div align="left" id="logo">
 			<h:link>
 				<h:graphicImage library="images" name="logo.png" id="logoPrincipal" />
@@ -28,10 +30,8 @@
 		</div>
 		</div>
 	</header>
-
-</h:body>
-
-<div id="conteudo">
+	
+	<div id="conteudo" style="text-align: -webkit-center;">
 	<ui:insert name="corpo" />
 </div>
 
@@ -42,6 +42,12 @@
 	
 </footer>
 </ui:insert>
+
+
+</div>
+</h:body>
+
+</div>
 </html>
 
 

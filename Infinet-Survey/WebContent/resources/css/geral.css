@@ -115,3 +115,23 @@ h1{
 	position: relative; 
 	top: -40%;
 }
+.ui-datatable-tablewrapper{
+	width:137%;
+}
+.ui-datatable{
+	padding-left: 12.99%;
+}
+
+#botaoAluno{
+	padding-left: 12.99%;
+
+	width: 105%;
+}
+
+#columOpc{
+	
+	border: 1px solid white;
+	
+	
+}
+

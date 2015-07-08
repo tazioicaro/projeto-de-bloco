@@ -7,24 +7,25 @@
 
 
 
-	<ui:define name="titulo">Cadastro de Alunos</ui:define>
+	<ui:define name="titulo">Consultar de Alunos</ui:define>
 
 	<ui:define name="corpo">
 
 		<f:param name="nomeTela" value="Aluno" />
 		<f:param name="nomeFuncaoTela" value="Incluir" />
 
-		<h1>Cadastra de Aluno</h1>
+		<h1>Consultar de Aluno</h1>
 		<!-- Temporário -->
 		<br />
-		<h:form id="frm" style="width:50%; align:center">
+		<h:form id="frm" style="width:50%; padding-right:12.99%">
 
 
-			<h:panelGrid columns="3" cellpadding="8" style="width:50%; align:center">
+			<h:panelGrid  id="tabelaAluno" columns="3" cellpadding="8" width="100%">
 				<p:outputLabel value="Nome" for="nome" />
-				<p:inputText id="nome" size="60" />
+				
+				<p:autoComplete id="nome"  size="60"/>
 				<p:commandButton value="Filtrar" style="margin:5px; font-size:12px" />
-
+<!--  
 				<h:panelGrid />
 				<p:dataTable>
 					<p:column headerText="Aluno" style="text-align:left; width:45%">
@@ -35,17 +36,33 @@
 						<h:outputText />
 					</p:column>
 				</p:dataTable>
+				
 				<h:outputText/>
-
+-->
 			</h:panelGrid>
 
 
+	<p:dataTable id="tabelaFiltroAlunos">
+					<p:column headerText="Aluno" style="text-align:left; width:45%">
+						<h:outputText />
+					</p:column>
 
+					<p:column headerText="CPF" style="text-align:left; width:15%">
+						<h:outputText />
+					</p:column>					
+					
+					<p:column headerText="Opção" style=" border-left-width: 19px; width: 22px; border-color: white">					
+					<p:button icon="ui-icon-pencil" title="Editar"/>					
+					</p:column>
+					
+					
+					
+				</p:dataTable>
 
 
 			<br />
 			<br />
-			<div align="center">
+			<div  id="botaoAluno">
 				<p:button value="Cancelar" style="margin:5px" />
 				<p:commandButton value="Cadastrar" style="margin:5px" />
 			</div>
