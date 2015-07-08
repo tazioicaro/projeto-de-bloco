@@ -7,14 +7,14 @@
 
 
 
-	<ui:define name="titulo">Cadastro de Alunos</ui:define>
+	<ui:define name="titulo">Alteração de Alunos</ui:define>
 
 	<ui:define name="corpo">
 
 		<f:param name="nomeTela" value="Aluno" />
-		<f:param name="nomeFuncaoTela" value="Incluir" />
+		<f:param name="nomeFuncaoTela" value="Alteração" />
 
-		<h1>Cadastro de Aluno</h1>
+		<h1>Alteração de Alunos</h1>
 		<!-- Temporário -->
 		<br />
 		<h:form id="frm" style="padding-left:25%">
@@ -22,18 +22,19 @@
 			<h:panelGrid columns="2" cellpadding="8">
 
 				<p:outputLabel value="Nome" for="nome" />
-				<p:inputText id="nome" size="60"  styleClass="form60"/>
+				<p:inputText id="nome" size="60"  styleClass="form60" value="Fulano de tal"/>
 
 				<p:outputLabel value="Sexo" for="sexo" />
 				<p:selectOneMenu id="sexo" >
 					<f:selectItem itemLabel="Selecione" />
+					<f:selectItem itemLabel="Masculino"/>
 				</p:selectOneMenu>
 
 				<p:outputLabel value="CPF" for="cpf" />
-				<p:inputText id="cpf" size="22"  styleClass="form25"/>
+				<p:inputText id="cpf" size="22"  styleClass="form25" value="108.759.987-37"/>
 
 				<p:outputLabel value="E-mail" for="email"  />
-				<p:inputText id="email" size="60"  styleClass="form60"/>
+				<p:inputText id="email" size="60"  styleClass="form60" value="fulano@pestana.com.br"/>
 
 			</h:panelGrid>
 			<br />
