@@ -20,12 +20,13 @@
 		<h:form id="frm" style="width:70%;">
 
 
-			<h:panelGrid  id="tabelaAluno" columns="3" cellpadding="8" width="100%">
+			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8"
+				width="100%">
 				<p:outputLabel value="Nome" for="nome" />
-				
-				<p:autoComplete id="nome"  size="60" styleClass="largura"/>
+
+				<p:autoComplete id="nome" size="60" styleClass="largura" />
 				<p:commandButton value="Filtrar" style="margin:5px; font-size:12px" />
-<!--  
+				<!--  
 				<h:panelGrid />
 				<p:dataTable>
 					<p:column headerText="Aluno" style="text-align:left; width:45%">
@@ -42,27 +43,33 @@
 			</h:panelGrid>
 
 
-	<p:dataTable id="tabelaFiltroAlunos">
-					<p:column headerText="Aluno" style="text-align:left; width:45%">
-						<h:outputText />
-					</p:column>
+			<p:dataTable id="tabelaFiltroAlunos">
+				<p:column headerText="Aluno" style="text-align:left; width:45%">
+					<h:outputText />
+				</p:column>
 
-					<p:column headerText="CPF" style="text-align:left; width:15%">
-						<h:outputText />
-					</p:column>					
-					
-					<p:column headerText="Opção" style=" border-left-width: 19px; width: 22px; border-color: white">					
-					<p:button icon="ui-icon-pencil" title="Editar"/>					
-					</p:column>
-					
-					
-					
-				</p:dataTable>
+				<p:column headerText="CPF" style="text-align:left; width:15%">
+					<h:outputText />
+				</p:column>
+
+				<p:column headerText="Opção"
+					style=" border-left-width: 19px; width: 22px; border-color: white">
+					<p:columnGroup>
+						<p:button icon="ui-icon-pencil" title="Editar" />
+						<p:button icon="ui-icon-pencil" title="Excluir" />
+					</p:columnGroup>
+				</p:column>
+
+
+
+
+
+			</p:dataTable>
 
 
 			<br />
 			<br />
-			<div  id="botaoAluno">
+			<div id="botaoAluno">
 				<p:button value="Cancelar" style="margin:5px" />
 				<p:commandButton value="Cadastrar" style="margin:5px" />
 			</div>
