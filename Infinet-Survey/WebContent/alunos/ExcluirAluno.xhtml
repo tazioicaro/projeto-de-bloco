@@ -1,0 +1,48 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<ui:define name="titulo">Excluisão de Alunos</ui:define>
+
+	<ui:define name="corpo">
+
+		<f:param name="nomeTela" value="Aluno" />
+		<f:param name="nomeFuncaoTela" value="Incluir" />
+
+		<h1>Excluisão de Aluno</h1>
+		<!-- Temporário -->
+		<br />
+		<h:form id="frm" style="padding-left:25%">
+
+			<h3 style="text-align: left">Deseja escluir este aluno?</h3>
+			<br />
+			<br />
+
+			<h:panelGrid columns="2" cellpadding="8">
+
+				<p:outputLabel value="Matrícula" for="matricula" />
+				<p:inputText id="matricula" size="60" styleClass="form25" />
+
+
+				<p:outputLabel value="Nome" for="nome" />
+				<p:inputText id="nome" size="60" styleClass="form60" />
+
+
+			</h:panelGrid>
+			<br />
+			<br />
+			<div align="center" style="padding-right: 25%">
+				<p:button value="Cancelar" style="margin:5px" />
+				<p:commandButton value="Excluir" style="margin:5px" />
+			</div>
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>
