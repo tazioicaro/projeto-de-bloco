@@ -5,7 +5,6 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 
-import controller.repositorio.Modulo;
 import controller.repositorio.Pessoa;
 
 public class PessoaHibernate implements Pessoa {

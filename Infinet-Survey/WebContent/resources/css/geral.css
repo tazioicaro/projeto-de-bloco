@@ -163,3 +163,7 @@ table tbody tr td span > input{
 .form25{
 	width: 25%;
 }
+
+.avaliacao input {
+	width: 12% !important;
+}
