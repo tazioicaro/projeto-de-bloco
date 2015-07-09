@@ -1,0 +1,45 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<ui:define name="titulo">Exclusão de Blocos</ui:define>
+
+	<ui:define name="corpo">
+
+		<f:param name="nomeTela" value="Blocos" />
+		<f:param name="nomeFuncaoTela" value="Alteração" />
+
+		<h1>Exclusão de Blocos</h1>
+		<!-- Temporário -->
+		<br />
+		<h:form id="frm" style="padding-left:25%">
+		
+		<h3 style="text-align: left">Confirma a exclusão desta avaliação da turma?</h3>
+			<br />
+			<br />
+
+			<h:panelGrid columns="2" cellpadding="8">
+
+				<p:outputLabel value="Nome do Bloco:" for="nomeB" style="width:13%"/>
+				<p:inputText id="nomeB" size="60"  styleClass="form60" value="Fulano de tal"/>
+
+				
+
+			</h:panelGrid>
+			<br />
+			<br />
+			<div align="center" style="padding-right:25%">
+				<p:button value="Cancelar" style="margin:5px" />
+				<p:commandButton value="Confirmar Exclusão" style="margin:5px" />
+			</div>
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>
