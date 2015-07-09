@@ -7,26 +7,30 @@
 
 
 
-	<ui:define name="titulo">Exclusão da Avaliação de Turma</ui:define>
+	<ui:define name="titulo">Excluisão de Alunos</ui:define>
 
 	<ui:define name="corpo">
 
-		<f:param name="nomeTela" value="Avaliação da Turma" />
-		<f:param name="nomeFuncaoTela" value="Excluir" />
+		<f:param name="nomeTela" value="Curso_Bloco" />
+		<f:param name="nomeFuncaoTela" value="Desvinculação" />
 
-		<h1>Exclusão da Avaliação de Turma </h1>
+		<h1>Excluisão de Aluno</h1>
 		<!-- Temporário -->
 		<br />
 		<h:form id="frm" style="padding-left:25%">
 
-			<h3 style="text-align: left">Confirma a exclusão desta avaliação da turma?</h3>
+			<h3 style="text-align: left">Confirma a desvinculação do bloco ao curso?</h3>
 			<br />
 			<br />
 
 			<h:panelGrid columns="2" cellpadding="8" columnClasses="rotulo,campo">
 
-				<p:outputLabel value="Avaliação" for="avaliacao" />
-				<p:inputText id="avaliacao" size="60" styleClass="form60" />
+				<p:outputLabel value="Bloco: " for="bloco"  />
+				<h:outputText id="bloco"  value="Teste" style="border:5px"/>
+
+
+				<p:outputLabel value="Curso:" for="curso" />
+				<h:outputText id="curso" size="60" styleClass="form60" value="Teste" style="text-align: left"/>
 
 
 			</h:panelGrid>
@@ -34,7 +38,7 @@
 			<br />
 			<div align="center" style="padding-right: 25%">
 				<p:button value="Cancelar" style="margin:5px" />
-				<p:commandButton value="Confirmar Exclução" style="margin:5px" />
+				<p:commandButton value="Confirmar Desvinculação" style="margin:5px" />
 			</div>
 		</h:form>
 

@@ -68,6 +68,7 @@ h1{
 	width: 130px;
 }
 
+
 .ui-panelgrid td{	
 	height: 34px;	
 }
@@ -167,4 +168,8 @@ table tbody tr td span > input{
 
 .avaliacao input {
 	width: 12% !important;
+}
+
+.cursoBloco td {
+	width: 2%;
 }
