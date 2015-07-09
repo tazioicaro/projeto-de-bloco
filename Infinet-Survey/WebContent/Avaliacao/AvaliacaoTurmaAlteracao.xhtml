@@ -22,48 +22,53 @@
 			<p:panelGrid columns="2" cellpadding="8">
 
 				<p:outputLabel value="Modelo de Avaliação" for="ModeloAval" />
-				<h:selectOneMenu id="ModeloAval" style="width:90%">
+				<h:selectOneMenu id="ModeloAval" style="width:100%; height: 100%">
 					<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 				</h:selectOneMenu>
 
 				<p:outputLabel value="Turma" for="turma" />
-				<h:selectOneMenu id="turma" style="width:90%">
+				<h:selectOneMenu id="turma" style="width:100%; height: 100%">
 					<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 				</h:selectOneMenu>
 
 
 				<p:outputLabel value="Objeto de Avaliação" for="objAvaliacao" />
-				<p:inputTextarea id="objAvaliacao" rows="5" style="width:90%"/>
-<h:outputLabel/>
-				<h:panelGroup style="width:100%">
-				<p:row>
+				<p:inputTextarea id="objAvaliacao" rows="5" style="width:100%" />
 				
-				<h:panelGroup >
-				<p:outputLabel value="Data de Início" for="dtInicio" style="width:10%"/>
-				<p:calendar id="dtInicio" styleClass="avaliacao"/>
+				<h:outputLabel />
+				<h:panelGroup style="width:100%; text-align:center;">
+					<p:row>
+
+						<h:panelGroup>
+							<p:outputLabel value="Data de Início:" for="dtInicio"
+								style=" margin:1%" />
+							<p:calendar id="dtInicio" styleClass="avaliacao" />
+						</h:panelGroup>
+
+						<h:panelGroup>
+							<p:outputLabel value="Hora Início:" for="hrInicio"
+								style=" margin:1%" />
+							<p:calendar id="hrInicio" styleClass="avaliacao" />
+						</h:panelGroup>
+
+						<h:panelGroup>
+							<p:outputLabel value="Data Final:" for="dtFinal"
+								style=" margin:1%" />
+							<p:calendar id="dtFinal" styleClass="avaliacao" />
+						</h:panelGroup>
+
+						<h:panelGroup>
+							<p:outputLabel value="Hora Final:" for="hrFinal"
+								style=" margin:1%" />
+							<p:calendar id="hrFinal" styleClass="avaliacao" />
+						</h:panelGroup>
+					</p:row>
+
 				</h:panelGroup>
-				
-				<h:panelGroup>
-				<p:outputLabel value="Hora Início" for="hrInicio" />
-				<p:calendar id="hrInicio" styleClass="avaliacao"/>
-				</h:panelGroup>
-				
-				<h:panelGroup>
-				<p:outputLabel value="Data Final" for="dtFinal" />
-				<p:calendar id="dtFinal" styleClass="avaliacao"/>
-				</h:panelGroup>
-				
-				<h:panelGroup>
-				<p:outputLabel value="Hora Final" for="hrFinal" />
-				<p:calendar id="hrFinal" styleClass="avaliacao"/>
-				</h:panelGroup>
-				</p:row>
-				
-				</h:panelGroup>
-				
+
 				<p:outputLabel value="Texto Convidativo" for="txConvidativo" />
-				<p:inputTextarea id="txConvidativo" rows="5" style="width:90%"/>
-				
+				<p:inputTextarea id="txConvidativo" rows="5" style="width:100%" />
+
 			</p:panelGrid>
 			<br />
 			<br />
