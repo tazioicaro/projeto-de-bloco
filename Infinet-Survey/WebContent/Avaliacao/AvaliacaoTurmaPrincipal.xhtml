@@ -38,20 +38,26 @@
 				<p:column headerText="Turma" style="text-align:left; width:45%">
 					<h:outputText />
 				</p:column>
-
+				
 				<p:column headerText="Opção"
-					style=" border-left-width: 19px; width: 22px; border-color: white">
-					<p:columnGroup>
-						<p:button icon="ui-icon-pencil" title="Editar" />
-						<p:button icon="ui-icon-pencil" title="Excluir" />
-					</p:columnGroup>
-				</p:column>
+					style=" border-left-width: 19px; width: 30px; border-color: white; padding:1px; text-align:center">
 
-<!--  -->
-
-
-
+					<p:button icon="ui-icon-pencil" title="Editar"
+						style="font-size: 0.6em" />
+					<p:commandButton icon="ui-icon-trash" title="Excluir"
+						style="font-size: 0.6em">
+						<p:confirm header="Exclusão de Avaliação de Turma"
+							message="Deseja realmente excluir o Avaliação de Turma?" icon="ui-icon-alert" />
+					</p:commandButton>
+</p:column>
 			</p:dataTable>
+			
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+				<p:button value="Não" icon="ui-icon-close"
+					styleClass="ui-confirmdialog-no" />
+				<p:commandButton value="Sim" icon="ui-icon-check"
+					styleClass="ui-confirmdialog-yes" />
+			</p:confirmDialog>
 
 
 			<br />
