@@ -65,7 +65,10 @@ h1{
 	padding: 10px;
 }
 .rotulo{
-	width: 130px;
+	width: 10%;
+}
+.campo{
+	width: 80%;
 }
 
 
@@ -173,3 +176,17 @@ table tbody tr td span > input{
 .cursoBloco td {
 	width: 2%;
 }
+
+.ui-column-title{
+	font-size: 1em;
+}
+.opc {
+	
+	border-left-width: 10px !important; 
+	width: 7%; 
+	border-color: white !important;
+	padding:1px; 
+	text-align:center;
+	
+}
+

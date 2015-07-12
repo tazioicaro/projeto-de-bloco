@@ -17,7 +17,7 @@
 		<h1>Consultar de Aluno</h1>
 		<!-- Temporário -->
 		<br />
-		<h:form id="frm" style="width:70%;">
+		<h:form id="frm" style="width:80%;">
 
 
 			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8"
@@ -31,7 +31,7 @@
 
 
 			<p:dataTable id="tabelaFiltroAlunos"
-				style="padding-left:14.9%; padding-right:11.9%"
+				style="padding-left:11%; padding-right:11%"
 				emptyMessage="Não existem usuários cadastrados"
 				value="#{alunosBean.alunosFiltrados}" var="alunos">
 				<p:column headerText="Aluno" style="text-align:left; width:45%">
@@ -42,35 +42,32 @@
 					<h:outputText value="123.158-728-50" />
 				</p:column>
 
-				<p:column headerText="Opção"
-					style=" border-left-width: 19px; width: 30px; border-color: white; padding:1px; text-align:center">
-
-					<p:button icon="ui-icon-pencil" title="Editar"
-						style="font-size: 0.6em" />
-					<p:commandButton icon="ui-icon-trash" title="Excluir"
-						style="font-size: 0.6em">
-						<p:confirm header="Exclusão de Aluno"
-							message="Deseja realmente excluir o Aluno?" icon="ui-icon-alert" />
+				<p:column headerText="Opção" styleClass="opc">
+					<p:button icon="ui-icon-pencil" title="Editar"	style="font-size: 0.6em" />
+					<p:commandButton icon="ui-icon-trash" title="Excluir" style="font-size: 0.6em">
+						<p:confirm header="Exclusão de Aluno"  id="confirmador" message="Deseja realmente excluir o Aluno?" icon="ui-icon-alert"  />
 					</p:commandButton>
-
 				</p:column>
 			</p:dataTable>
-
-			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-				<p:button value="Não" icon="ui-icon-close"
-					styleClass="ui-confirmdialog-no" />
-				<p:commandButton value="Sim" icon="ui-icon-check"
-					styleClass="ui-confirmdialog-yes" />
+			
+			<p:confirmDialog global="true"  id="confirmador" style="width: auto; height: auto; left: 588px; top: 50%!important;">
+				<p:button value="Não" icon="ui-icon-close"	styleClass="ui-confirmdialog-no" />
+				<p:commandButton value="Sim"  icon="ui-icon-check"	styleClass="ui-confirmdialog-yes" />
 			</p:confirmDialog>
-
-
+			
+			
 			<br />
 			<br />
 			<div id="botaoAluno">
 				<p:commandButton value="Cadastrar" style="margin:5px" />
 				<p:button value="Cancelar" style="margin:5px" />
 			</div>
+
+		
+
+		
 		</h:form>
+			
 
 	</ui:define>
 
