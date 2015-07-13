@@ -14,26 +14,23 @@
 		<f:param name="nomeTela" value="Aluno" />
 		<f:param name="nomeFuncaoTela" value="Incluir" />
 
-		<h3>Consultar de Aluno</h3>
-				<!-- Temporário -->
+	
 		
 		<h:form id="frm" style="width:80%;">
 
 
-			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8"
-				width="100%" columnClasses="rotulo,campo">
-				<p:outputLabel value="Nome" for="nome" />
-
+			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8" width="100%" columnClasses="rotulo,campo">
+			
+				<p:outputLabel value="Aluno :" for="nome" />
 				<p:autoComplete id="nome" size="60" styleClass="largura" />
-				<p:commandButton value="Filtrar" style="margin:5px; font-size:12px" />
+				<p:commandButton value="Filtrar" id="filtrar" style="margin:5px; font-size:1em" />
 
 			</h:panelGrid>
 
 
-			<p:dataTable id="tabelaFiltroAlunos"
-				style="padding-left:11%; padding-right:11%"
-				emptyMessage="Não existem usuários cadastrados"
-				value="#{alunosBean.alunosFiltrados}" var="alunos">
+			<p:dataTable id="tabelaFiltroAlunos" style="padding-left:11%; padding-right:11%"
+				emptyMessage="Não existem usuários cadastrados"	value="#{alunosBean.alunosFiltrados}" var="alunos" rows="20"
+				paginator="true" paginatorAlwaysVisible="false"	paginatorPosition="bottom">
 				<p:column headerText="Aluno" style="text-align:left; width:45%">
 					<h:outputText value="Fulano de tal" />
 				</p:column>
@@ -59,7 +56,7 @@
 			
 			<br />
 			<div id="botaoAluno">
-				<p:commandButton value="Cadastrar" style="margin:5px" />
+				<p:commandButton value="Novo Aluno" style="margin:5px" />
 				<p:button value="Cancelar" style="margin:5px" />
 			</div>
 

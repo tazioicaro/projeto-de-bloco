@@ -20,17 +20,16 @@
 		<h:form id="frm" style="width:70%;">
 
 
-			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8"
-				width="100%" columnClasses="rotulo,campo">
-				<p:outputLabel value="Nome do Bloco" for="nomeB" />
-
+			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8" width="100%" columnClasses="rotulo,campo">
+			
+				<p:outputLabel value="Bloco :" for="nomeB" />
 				<p:autoComplete id="nomeB" size="60" styleClass="largura" />
-				<p:commandButton value="Filtrar" style="margin:5px; font-size:12px" />
+				<p:commandButton value="Filtrar" id="filtrar" style="margin:5px; font-size:0.9em" />
 
 			</h:panelGrid>
 
 
-			<p:dataTable id="tabelaFiltroBlocos" style="padding-left:14.8%; padding-right:11.7%" emptyMessage="Não existem Blocos cadastrados">
+			<p:dataTable id="tabelaFiltroBlocos" style="padding-left:11%; padding-right:11%" emptyMessage="Não existem Blocos cadastrados">
 				<p:column headerText="Código" style="text-align:left; width:15%">
 					<h:outputText />
 				</p:column>
