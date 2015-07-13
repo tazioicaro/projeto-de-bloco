@@ -29,6 +29,7 @@ header > div{
 	height: 75px;
 	
 }
+
 footer{
 	padding: 0px 8px;
 	margin-bottom: 10px;
@@ -190,3 +191,17 @@ table tbody tr td span > input{
 	
 }
 
+.ajustesTela{
+	width: 99.7% !important;
+}
+
+/* Retirar linhas do P layout*/
+
+.ui-widget, .ui-widget{
+	font-size: 1.em;
+}
+.ui-layout-unit{
+	border-bottom: none;
+	border-top: none;
+	padding: 0px !important;
+}
