@@ -1,0 +1,75 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<ui:define name="titulo">Cursos e Blocos - Principal</ui:define>
+
+	<ui:define name="corpo">
+
+		<f:param name="nomeTela" value="Curso_Bloco" />
+		<f:param name="nomeFuncaoTela" value="Principal" />
+
+		<h1>Tela principal dos Blocos</h1>
+		<!-- Temporário -->
+		<br />
+		<h:form id="frm" style="width:70%;">
+
+
+			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8" width="100%" columnClasses="rotulo,campo">
+			
+				<p:outputLabel value="Curo :" for="nomeC" />
+				<p:autoComplete id="nomeC" size="60" styleClass="largura" />
+				<p:commandButton value="Filtrar" id="filtrar" style="margin:5px; font-size:0.9em" />
+
+			</h:panelGrid>
+
+
+			<p:dataTable id="tabelaFiltroCursosBlocos" style="padding-left:11%; padding-right:11%" emptyMessage="Não existem Blocos cadastrados"
+			paginator="true" paginatorAlwaysVisible="false"	paginatorPosition="bottom">
+				<p:column headerText="C. Curso" style="text-align:left; width:10%">
+					<h:outputText value="Teste"/>
+				</p:column>
+				
+				<p:column headerText="Curso" style="text-align:left; width:30%">
+					<h:outputText value="curso"/>
+				</p:column>
+
+				<p:column headerText="Bloco" style="text-align:left; width:30%">
+					<h:outputText value="Bloco" />
+				</p:column>
+
+				<p:column headerText="Opção" styleClass="opc">
+
+					<p:button icon="ui-icon-link" title="Vincular"	style="font-size: 0.6em" />
+					<p:commandButton icon="ui-icon-extLink" title="Desvincular"	style="font-size: 0.6em">
+						<p:confirm header="Desvinculação de Curso"	message="Deseja realmente desvincular o curso do Bloco"
+							icon="ui-icon-alert" id="confirmador" />
+					</p:commandButton>
+
+				</p:column>
+			</p:dataTable>
+			
+			<p:confirmDialog global="true"  id="confirmador" style="width: auto; height: auto; left: 588px; top: 50%!important;">
+				<p:button value="Não" icon="ui-icon-close"	styleClass="ui-confirmdialog-no" />
+				<p:commandButton value="Sim"  icon="ui-icon-check"	styleClass="ui-confirmdialog-yes" />
+			</p:confirmDialog>
+
+
+			<br />
+			<br />
+			<!--  
+			<div id="botaoAluno">							
+				<p:commandButton value="Cadastrar" style="margin:5px" />				
+				<p:button value="Cancelar" style="margin:5px" />
+			</div>-->
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>

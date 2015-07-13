@@ -1,0 +1,60 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<ui:define name="titulo">Cursos e Blocos - Vinculação</ui:define>
+
+	<ui:define name="corpo">
+
+		<f:param name="nomeTela" value="Curso_Bloco" />
+		<f:param name="nomeFuncaoTela" value="Vinculação" />
+
+		<h1>Tela Vinculação dos Blocos</h1>
+		<!-- Temporário -->
+		<br />
+		<h:form id="frm" style="width:70%;">
+
+
+			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8" width="100%" columnClasses="rotulo,campo" width="100%">
+			
+				<p:outputLabel value="Bloco :" for="nomeB" />
+				<p:autoComplete id="nomeB" size="60" styleClass="largura" />
+				<p:commandButton value="Filtrar" id="filtrar" style="margin:5px; font-size:0.9em" />
+
+			</h:panelGrid>
+
+
+			<p:dataTable id="tabelaFiltroBlocos" style="padding-left:11%; padding-right:11%" emptyMessage="Não existem Blocos cadastrados"
+			paginator="true" paginatorAlwaysVisible="false"	paginatorPosition="bottom">
+				<p:column headerText="Código" style="text-align:left; width:15%">
+					<h:outputText />
+				</p:column>
+
+				<p:column headerText="Bloco" style="text-align:left; width:45%">
+					<h:outputText />
+				</p:column>
+
+				<p:column headerText="Opção" style=" border-left-width: 19px; width: 22px; border-color: white">
+			
+						<p:commandButton icon="ui-icon-link" title="Vincular" />				
+					
+				</p:column>
+			</p:dataTable>
+
+
+			<br />
+			<br />
+			<div id="botaoAluno">							
+					<p:button value="Cancelar" style="margin:5px" />
+			</div>
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>
