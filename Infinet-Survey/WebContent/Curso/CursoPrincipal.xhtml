@@ -1,0 +1,71 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<ui:define name="titulo">Consultar de Alunos</ui:define>
+
+	<ui:define name="corpo">
+
+		<f:param name="nomeTela" value="Curso" />
+		<f:param name="nomeFuncaoTela" value="Principal" />
+
+	
+		
+		<h:form id="frm" style="width:80%;">
+
+
+			<h:panelGrid id="tabelaAluno" columns="3" cellpadding="8" width="100%" columnClasses="rotulo,campo">
+			
+				<p:outputLabel value="Curso :" for="curso" />
+				<p:autoComplete id="curso" size="60" styleClass="largura" />
+				<p:commandButton value="Filtrar" id="filtrar" style="margin:5px; font-size:1em" />
+
+			</h:panelGrid>
+
+
+			<p:dataTable id="tabelaFiltroCursos" style="padding-left:11%; padding-right:11%"
+				emptyMessage="Não existem usuários cadastrados"	rows="10"  paginator="true" paginatorAlwaysVisible="false"	paginatorPosition="bottom">
+				<p:column headerText="Código" style="text-align:left; width:10%">
+					<h:outputText value="Fulano de tal" />
+				</p:column>
+
+				<p:column headerText="Curso" style="text-align:left; width:45%">
+					<h:outputText value="123.158-728-50" />
+				</p:column>
+
+				<p:column headerText="Opção" styleClass="opc">
+					<p:button icon="ui-icon-pencil" title="Editar"	style="font-size: 0.6em" />
+					<p:commandButton icon="ui-icon-trash" title="Excluir" style="font-size: 0.6em">
+						<p:confirm header="Exclusão de Curso"  id="confirmador" message="Deseja realmente excluir o Curso" icon="ui-icon-alert"  />
+					</p:commandButton>
+				</p:column>
+			</p:dataTable>
+			
+			<p:confirmDialog global="true"  id="confirmador" style="width: auto; height: auto; left: 588px; top: 50%!important;">
+				<p:button value="Não" icon="ui-icon-close"	styleClass="ui-confirmdialog-no" />
+				<p:commandButton value="Sim"  icon="ui-icon-check"	styleClass="ui-confirmdialog-yes" />
+			</p:confirmDialog>
+			
+			
+			
+			<br />
+			<div id="botaoAluno">
+				<p:commandButton value="Novo Curso" style="margin:5px" />
+				<p:button value="Cancelar" style="margin:5px" />
+			</div>
+
+		
+
+		
+		</h:form>
+			
+
+	</ui:define>
+
+
+</ui:composition>
